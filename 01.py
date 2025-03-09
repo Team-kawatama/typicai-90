@@ -9,10 +9,10 @@ def split(pieces,minW):
         if (A[i]-side)>=minW:
             side = A[i]
             can+=1
-    if (can <= pieces):
-        return True
-    else:
+    if (can > pieces):
         return False
+    else:
+        return True
 
 '''
 めぐる式二分探索
@@ -35,7 +35,7 @@ right = L
 while right - left > 1:
     med = (left+right)//2
     if (split(K,med)):
-        right = med
-    else:
         left = med
+    else:
+        right = med
 print(left)
