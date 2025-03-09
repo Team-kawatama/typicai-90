@@ -10,9 +10,9 @@ def split(pieces,minW):
             side = A[i]
             can+=1
     if (can > pieces):
-        return False
-    else:
         return True
+    else:
+        return False
 
 '''
 めぐる式二分探索
